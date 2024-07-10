@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744CE92C3E9BF800128384 /* RoverVisionApp.swift */; };
-		81744CEC2C3E9BF800128384 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744CEB2C3E9BF800128384 /* ContentView.swift */; };
 		81744CEE2C3E9BF900128384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CED2C3E9BF900128384 /* Assets.xcassets */; };
 		81744CF12C3E9BF900128384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CF02C3E9BF900128384 /* Preview Assets.xcassets */; };
+		81744D072C3EAA2B00128384 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D062C3EAA2B00128384 /* Photo.swift */; };
+		81744D0A2C3EABA600128384 /* NASAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D092C3EABA600128384 /* NASAManager.swift */; };
+		81744D0D2C3EAE7100128384 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D0C2C3EAE7100128384 /* Filter.swift */; };
+		81744D0F2C3EAECC00128384 /* RoverName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D0E2C3EAECC00128384 /* RoverName.swift */; };
+		81744D112C3EAED400128384 /* CameraName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D102C3EAED400128384 /* CameraName.swift */; };
+		81744D132C3EBEF500128384 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D122C3EBEF500128384 /* HomeViewModel.swift */; };
+		81744D152C3EBF0800128384 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D142C3EBF0700128384 /* HistoryViewModel.swift */; };
+		81744D172C3EC0E300128384 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D162C3EC0E300128384 /* HomeView.swift */; };
+		81744D192C3ECE4000128384 /* PhotoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D182C3ECE4000128384 /* PhotoCardView.swift */; };
+		81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1A2C3ECE4900128384 /* FilterCardView.swift */; };
+		81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1C2C3ECF0A00128384 /* Camera.swift */; };
+		81744D1F2C3ECF1000128384 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1E2C3ECF1000128384 /* Rover.swift */; };
+		81744D242C3ED34B00128384 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D232C3ED34B00128384 /* PhotoInfoView.swift */; };
+		81744D262C3EDC0900128384 /* HomeTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D252C3EDC0900128384 /* HomeTopBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81744CE62C3E9BF800128384 /* RoverVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoverVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81744CE92C3E9BF800128384 /* RoverVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverVisionApp.swift; sourceTree = "<group>"; };
-		81744CEB2C3E9BF800128384 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81744CED2C3E9BF900128384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81744CF02C3E9BF900128384 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81744D062C3EAA2B00128384 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		81744D092C3EABA600128384 /* NASAManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAManager.swift; sourceTree = "<group>"; };
+		81744D0C2C3EAE7100128384 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		81744D0E2C3EAECC00128384 /* RoverName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverName.swift; sourceTree = "<group>"; };
+		81744D102C3EAED400128384 /* CameraName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraName.swift; sourceTree = "<group>"; };
+		81744D122C3EBEF500128384 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		81744D142C3EBF0700128384 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		81744D162C3EC0E300128384 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		81744D182C3ECE4000128384 /* PhotoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardView.swift; sourceTree = "<group>"; };
+		81744D1A2C3ECE4900128384 /* FilterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCardView.swift; sourceTree = "<group>"; };
+		81744D1C2C3ECF0A00128384 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		81744D1E2C3ECF1000128384 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		81744D232C3ED34B00128384 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
+		81744D252C3EDC0900128384 /* HomeTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +78,12 @@
 			isa = PBXGroup;
 			children = (
 				81744CE92C3E9BF800128384 /* RoverVisionApp.swift */,
-				81744CEB2C3E9BF800128384 /* ContentView.swift */,
-				81744CED2C3E9BF900128384 /* Assets.xcassets */,
-				81744CEF2C3E9BF900128384 /* Preview Content */,
+				81744CFA2C3E9CD600128384 /* Views */,
+				81744CF92C3E9CCF00128384 /* ViewModels */,
+				81744CFB2C3E9CFA00128384 /* Enums */,
+				81744D082C3EAB4A00128384 /* Managers */,
+				81744CF82C3E9CBF00128384 /* Models */,
+				81744CF72C3E9C1800128384 /* Supporting */,
 			);
 			path = RoverVision;
 			sourceTree = "<group>";
@@ -65,6 +94,72 @@
 				81744CF02C3E9BF900128384 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81744CF72C3E9C1800128384 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				81744CEF2C3E9BF900128384 /* Preview Content */,
+				81744CED2C3E9BF900128384 /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		81744CF82C3E9CBF00128384 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81744D0C2C3EAE7100128384 /* Filter.swift */,
+				81744D062C3EAA2B00128384 /* Photo.swift */,
+				81744D1C2C3ECF0A00128384 /* Camera.swift */,
+				81744D1E2C3ECF1000128384 /* Rover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81744CF92C3E9CCF00128384 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				81744D122C3EBEF500128384 /* HomeViewModel.swift */,
+				81744D142C3EBF0700128384 /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		81744CFA2C3E9CD600128384 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81744D162C3EC0E300128384 /* HomeView.swift */,
+				81744D202C3ED31800128384 /* CustomUIElements */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81744CFB2C3E9CFA00128384 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				81744D0E2C3EAECC00128384 /* RoverName.swift */,
+				81744D102C3EAED400128384 /* CameraName.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		81744D082C3EAB4A00128384 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				81744D092C3EABA600128384 /* NASAManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		81744D202C3ED31800128384 /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				81744D252C3EDC0900128384 /* HomeTopBarView.swift */,
+				81744D182C3ECE4000128384 /* PhotoCardView.swift */,
+				81744D1A2C3ECE4900128384 /* FilterCardView.swift */,
+				81744D232C3ED34B00128384 /* PhotoInfoView.swift */,
+			);
+			path = CustomUIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +232,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81744CEC2C3E9BF800128384 /* ContentView.swift in Sources */,
+				81744D262C3EDC0900128384 /* HomeTopBarView.swift in Sources */,
+				81744D0D2C3EAE7100128384 /* Filter.swift in Sources */,
+				81744D152C3EBF0800128384 /* HistoryViewModel.swift in Sources */,
+				81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */,
+				81744D112C3EAED400128384 /* CameraName.swift in Sources */,
+				81744D172C3EC0E300128384 /* HomeView.swift in Sources */,
+				81744D242C3ED34B00128384 /* PhotoInfoView.swift in Sources */,
+				81744D0F2C3EAECC00128384 /* RoverName.swift in Sources */,
 				81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */,
+				81744D0A2C3EABA600128384 /* NASAManager.swift in Sources */,
+				81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */,
+				81744D1F2C3ECF1000128384 /* Rover.swift in Sources */,
+				81744D192C3ECE4000128384 /* PhotoCardView.swift in Sources */,
+				81744D132C3EBEF500128384 /* HomeViewModel.swift in Sources */,
+				81744D072C3EAA2B00128384 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -271,15 +379,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RoverVision/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "RoverVision/Supporting/Preview\\ Content";
 				DEVELOPMENT_TEAM = MWQ8P93RWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rover Vision";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +398,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetary.RoverVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,15 +415,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RoverVision/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "RoverVision/Supporting/Preview\\ Content";
 				DEVELOPMENT_TEAM = MWQ8P93RWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rover Vision";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +434,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetary.RoverVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
