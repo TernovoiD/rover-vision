@@ -18,7 +18,7 @@ struct Photo: Codable, Identifiable {
     static let test = Photo(id: 1234,
                             sol: 1000,
                             camera: Camera(id: 5678, name: "FHAC", roverID: 90, fullName: "Front Hazard Avoidance Camera"),
-                            imgSrc: "",
+                            imgSrc: "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG",
                             earthDate: "June 6, 2015",
                             rover: Rover(id: 90,
                                          name: "Opportunity",

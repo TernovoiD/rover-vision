@@ -1,6 +1,6 @@
 import Foundation
 
-enum CameraName: String {
+enum CameraName: String, CaseIterable {
     case fhaz
     case rhaz
     case mast

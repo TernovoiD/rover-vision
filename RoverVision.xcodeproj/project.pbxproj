@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		814FEC812C405FA60071A4BF /* FilterCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814FEC802C405FA60071A4BF /* FilterCoreDataManager.swift */; };
+		814FEC842C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */; };
 		81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744CE92C3E9BF800128384 /* RoverVisionApp.swift */; };
 		81744CEE2C3E9BF900128384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CED2C3E9BF900128384 /* Assets.xcassets */; };
 		81744CF12C3E9BF900128384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CF02C3E9BF900128384 /* Preview Assets.xcassets */; };
@@ -22,11 +24,22 @@
 		81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1A2C3ECE4900128384 /* FilterCardView.swift */; };
 		81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1C2C3ECF0A00128384 /* Camera.swift */; };
 		81744D1F2C3ECF1000128384 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1E2C3ECF1000128384 /* Rover.swift */; };
-		81744D242C3ED34B00128384 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D232C3ED34B00128384 /* PhotoInfoView.swift */; };
-		81744D262C3EDC0900128384 /* HomeTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D252C3EDC0900128384 /* HomeTopBarView.swift */; };
+		81744D242C3ED34B00128384 /* ImageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D232C3ED34B00128384 /* ImageInfoView.swift */; };
+		81BCB2242C3FBA9A0053A071 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2232C3FBA9A0053A071 /* FilterButtonView.swift */; };
+		81BCB2262C3FBEB70053A071 /* HistoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2252C3FBEB70053A071 /* HistoryButtonView.swift */; };
+		81BCB2292C3FC0110053A071 /* RVNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2282C3FC0110053A071 /* RVNavigationBarModifier.swift */; };
+		81BCB22B2C3FC5010053A071 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB22A2C3FC5010053A071 /* HistoryView.swift */; };
+		81BCB22D2C3FC8260053A071 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB22C2C3FC8260053A071 /* LottieView.swift */; };
+		81BCB2302C3FC90C0053A071 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 81BCB22F2C3FC90C0053A071 /* Lottie */; };
+		81BCB2322C3FCBE90053A071 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2312C3FCBE90053A071 /* LoadingView.swift */; };
+		81BCB2342C3FCC890053A071 /* Loader_Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 81BCB2332C3FCC890053A071 /* Loader_Test.json */; };
+		81BCB2392C3FFC230053A071 /* PhotoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2382C3FFC230053A071 /* PhotoCardViewModel.swift */; };
+		81BCB23B2C4008AB0053A071 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB23A2C4008AB0053A071 /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		814FEC802C405FA60071A4BF /* FilterCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCoreDataManager.swift; sourceTree = "<group>"; };
+		814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoverVisionContainer.xcdatamodel; sourceTree = "<group>"; };
 		81744CE62C3E9BF800128384 /* RoverVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoverVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81744CE92C3E9BF800128384 /* RoverVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverVisionApp.swift; sourceTree = "<group>"; };
 		81744CED2C3E9BF900128384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,8 +56,17 @@
 		81744D1A2C3ECE4900128384 /* FilterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCardView.swift; sourceTree = "<group>"; };
 		81744D1C2C3ECF0A00128384 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		81744D1E2C3ECF1000128384 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
-		81744D232C3ED34B00128384 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
-		81744D252C3EDC0900128384 /* HomeTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopBarView.swift; sourceTree = "<group>"; };
+		81744D232C3ED34B00128384 /* ImageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoView.swift; sourceTree = "<group>"; };
+		81BCB2232C3FBA9A0053A071 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		81BCB2252C3FBEB70053A071 /* HistoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButtonView.swift; sourceTree = "<group>"; };
+		81BCB2282C3FC0110053A071 /* RVNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVNavigationBarModifier.swift; sourceTree = "<group>"; };
+		81BCB22A2C3FC5010053A071 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		81BCB22C2C3FC8260053A071 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		81BCB2312C3FCBE90053A071 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		81BCB2332C3FCC890053A071 /* Loader_Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader_Test.json; sourceTree = "<group>"; };
+		81BCB2352C3FE7D20053A071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		81BCB2382C3FFC230053A071 /* PhotoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardViewModel.swift; sourceTree = "<group>"; };
+		81BCB23A2C4008AB0053A071 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BCB2302C3FC90C0053A071 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +100,7 @@
 		81744CE82C3E9BF800128384 /* RoverVision */ = {
 			isa = PBXGroup;
 			children = (
+				81BCB2352C3FE7D20053A071 /* Info.plist */,
 				81744CE92C3E9BF800128384 /* RoverVisionApp.swift */,
 				81744CFA2C3E9CD600128384 /* Views */,
 				81744CF92C3E9CCF00128384 /* ViewModels */,
@@ -84,6 +108,7 @@
 				81744D082C3EAB4A00128384 /* Managers */,
 				81744CF82C3E9CBF00128384 /* Models */,
 				81744CF72C3E9C1800128384 /* Supporting */,
+				814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */,
 			);
 			path = RoverVision;
 			sourceTree = "<group>";
@@ -99,6 +124,7 @@
 		81744CF72C3E9C1800128384 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				81BCB2332C3FCC890053A071 /* Loader_Test.json */,
 				81744CEF2C3E9BF900128384 /* Preview Content */,
 				81744CED2C3E9BF900128384 /* Assets.xcassets */,
 			);
@@ -121,6 +147,7 @@
 			children = (
 				81744D122C3EBEF500128384 /* HomeViewModel.swift */,
 				81744D142C3EBF0700128384 /* HistoryViewModel.swift */,
+				81BCB2382C3FFC230053A071 /* PhotoCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -128,8 +155,12 @@
 		81744CFA2C3E9CD600128384 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81BCB2312C3FCBE90053A071 /* LoadingView.swift */,
 				81744D162C3EC0E300128384 /* HomeView.swift */,
-				81744D202C3ED31800128384 /* CustomUIElements */,
+				81BCB22A2C3FC5010053A071 /* HistoryView.swift */,
+				81BCB23A2C4008AB0053A071 /* PhotoDetailView.swift */,
+				81BCB2222C3FBA870053A071 /* Custom */,
+				81BCB2272C3FBFEB0053A071 /* Modifiers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,19 +178,30 @@
 			isa = PBXGroup;
 			children = (
 				81744D092C3EABA600128384 /* NASAManager.swift */,
+				814FEC802C405FA60071A4BF /* FilterCoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		81744D202C3ED31800128384 /* CustomUIElements */ = {
+		81BCB2222C3FBA870053A071 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				81744D252C3EDC0900128384 /* HomeTopBarView.swift */,
+				81BCB22C2C3FC8260053A071 /* LottieView.swift */,
+				81BCB2232C3FBA9A0053A071 /* FilterButtonView.swift */,
 				81744D182C3ECE4000128384 /* PhotoCardView.swift */,
 				81744D1A2C3ECE4900128384 /* FilterCardView.swift */,
-				81744D232C3ED34B00128384 /* PhotoInfoView.swift */,
+				81744D232C3ED34B00128384 /* ImageInfoView.swift */,
+				81BCB2252C3FBEB70053A071 /* HistoryButtonView.swift */,
 			);
-			path = CustomUIElements;
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		81BCB2272C3FBFEB0053A071 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				81BCB2282C3FC0110053A071 /* RVNavigationBarModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +220,9 @@
 			dependencies = (
 			);
 			name = RoverVision;
+			packageProductDependencies = (
+				81BCB22F2C3FC90C0053A071 /* Lottie */,
+			);
 			productName = RoverVision;
 			productReference = 81744CE62C3E9BF800128384 /* RoverVision.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 81744CDD2C3E9BF800128384;
+			packageReferences = (
+				81BCB22E2C3FC90C0053A071 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 81744CE72C3E9BF800128384 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +270,7 @@
 			files = (
 				81744CF12C3E9BF900128384 /* Preview Assets.xcassets in Resources */,
 				81744CEE2C3E9BF900128384 /* Assets.xcassets in Resources */,
+				81BCB2342C3FCC890053A071 /* Loader_Test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,21 +281,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81744D262C3EDC0900128384 /* HomeTopBarView.swift in Sources */,
+				81BCB2262C3FBEB70053A071 /* HistoryButtonView.swift in Sources */,
 				81744D0D2C3EAE7100128384 /* Filter.swift in Sources */,
 				81744D152C3EBF0800128384 /* HistoryViewModel.swift in Sources */,
 				81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */,
 				81744D112C3EAED400128384 /* CameraName.swift in Sources */,
+				81BCB2392C3FFC230053A071 /* PhotoCardViewModel.swift in Sources */,
 				81744D172C3EC0E300128384 /* HomeView.swift in Sources */,
-				81744D242C3ED34B00128384 /* PhotoInfoView.swift in Sources */,
+				81744D242C3ED34B00128384 /* ImageInfoView.swift in Sources */,
+				81BCB23B2C4008AB0053A071 /* PhotoDetailView.swift in Sources */,
+				81BCB22B2C3FC5010053A071 /* HistoryView.swift in Sources */,
 				81744D0F2C3EAECC00128384 /* RoverName.swift in Sources */,
+				81BCB2292C3FC0110053A071 /* RVNavigationBarModifier.swift in Sources */,
 				81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */,
 				81744D0A2C3EABA600128384 /* NASAManager.swift in Sources */,
 				81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */,
+				81BCB2322C3FCBE90053A071 /* LoadingView.swift in Sources */,
 				81744D1F2C3ECF1000128384 /* Rover.swift in Sources */,
 				81744D192C3ECE4000128384 /* PhotoCardView.swift in Sources */,
 				81744D132C3EBEF500128384 /* HomeViewModel.swift in Sources */,
+				81BCB2242C3FBA9A0053A071 /* FilterButtonView.swift in Sources */,
+				81BCB22D2C3FC8260053A071 /* LottieView.swift in Sources */,
 				81744D072C3EAA2B00128384 /* Photo.swift in Sources */,
+				814FEC842C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld in Sources */,
+				814FEC812C405FA60071A4BF /* FilterCoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +441,7 @@
 				DEVELOPMENT_TEAM = MWQ8P93RWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoverVision/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Rover Vision";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -419,6 +478,7 @@
 				DEVELOPMENT_TEAM = MWQ8P93RWJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoverVision/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Rover Vision";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -466,6 +526,39 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81BCB22E2C3FC90C0053A071 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81BCB22F2C3FC90C0053A071 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81BCB22E2C3FC90C0053A071 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */,
+			);
+			currentVersion = 814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */;
+			name = RoverVisionContainer.xcdatamodeld;
+			path = /Users/danyloternovoi/Developer/RoverVision/RoverVision/RoverVisionContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 81744CDE2C3E9BF800128384 /* Project object */;
 }

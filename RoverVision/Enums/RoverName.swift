@@ -1,6 +1,6 @@
 import Foundation
 
-enum RoverName: String {
+enum RoverName: String, CaseIterable {
     case opportunity
     case curiosity
     case spirit
