@@ -16,7 +16,7 @@ class NASAManager {
                     fromPage page: Int? = nil,
                     usingCamera camera: CameraName? = nil,
                     onDate date: Date) async throws -> [Photo] {
-        var urlString = baseURL + "rovers/\(rover)/photos?" + "earth_date=2015-06-3"
+        var urlString = baseURL + "rovers/\(rover)/photos?" + "earth_date=\(formatDate(date))"
         if let page { urlString += "&page=\(page)" }
         if let camera { urlString += "&camera=\(camera)" }
         urlString += "&api_key=\(keyAPI)"

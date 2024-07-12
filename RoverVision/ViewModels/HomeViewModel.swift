@@ -10,38 +10,57 @@ final class HomeViewModel: ObservableObject {
     @Published var filterDate = Date()
     @Published var filterRover: RoverName = .curiosity
     @Published var filterCamera: CameraName? = nil
+    @Published var currentPage = 1
     
     // Error handling
     @Published var error: Bool = false
     @Published var errorTitle: String = ""
     @Published var errorMessage: String = ""
     
+    // Loading state
+    @Published var loading: Bool = false
+    
     init() {
-        Task { await loadPhotos(forFilter: getCurrentFilter(), onPage: 1) }
+        Task { await loadPhotos() }
     }
     
-    func loadPhotos(forFilter filter: Filter, onPage page: Int) async {
+    func loadPhotos() async {
+        loadingState(true)
         do {
-            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: page, usingCamera: filter.camera, onDate: filter.date)
+            let filter = getCurrentFilter()
+            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: 1, usingCamera: filter.camera, onDate: filter.date)
             DispatchQueue.main.async {
                 self.photos = photos
+                self.currentPage = 1
             }
         } catch let error {
             showError(title: "Unable to load Photos", description: error.localizedDescription)
         }
+        loadingState(false)
+    }
+    
+    func loadMorePhotos() async {
+        loadingState(true)
+        do {
+            let filter = getCurrentFilter()
+            let newPage = currentPage + 1
+            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: newPage, usingCamera: filter.camera, onDate: filter.date)
+            DispatchQueue.main.async {
+                self.photos.append(contentsOf: photos)
+                self.currentPage = newPage
+            }
+        } catch let error {
+            showError(title: "Unable to load Photos", description: error.localizedDescription)
+        }
+        loadingState(false)
+    }
+    
+    private func loadingState(_ state: Bool) {
+        DispatchQueue.main.async { self.loading = state }
     }
     
     func getCurrentFilter() -> Filter {
         Filter(date: filterDate, rover: filterRover, camera: filterCamera)
-    }
-    
-    func getFilters() -> [Filter] {
-        do {
-            return try filtersManager.getFilters()
-        } catch let error {
-            showError(title: "Unable to load Filters", description: error.localizedDescription)
-            return [ ]
-        }
     }
     
     func save(filter: Filter) {
@@ -50,14 +69,6 @@ final class HomeViewModel: ObservableObject {
             showError(title: "Success", description: "Your current filter has been successfully saved in history.")
         } catch let error {
             showError(title: "Unable to save Filter", description: error.localizedDescription)
-        }
-    }
-    
-    func delete(filter: Filter) {
-        do {
-            try filtersManager.delete(filter: filter)
-        } catch let error {
-            showError(title: "Unable to delete Filter", description: error.localizedDescription)
         }
     }
 }

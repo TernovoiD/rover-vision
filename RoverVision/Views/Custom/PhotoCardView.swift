@@ -23,13 +23,18 @@ struct PhotoCardView: View {
                             }
                         }
                 } else if phase.error != nil {
-                    Color.red
+                    Image(systemName: "questionmark.folder.fill")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .foregroundStyle(Color.red)
                         .frame(width: 150, height: 150)
-                        .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
                 } else {
-                    Color.blue
+                    Color.gray
                         .frame(width: 150, height: 150)
                         .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                        .overlay {
+                            ProgressView().scaleEffect(2)
+                        }
                 }
             }
         }
@@ -40,9 +45,7 @@ struct PhotoCardView: View {
             .clipped()
             .shadow(color: .black.opacity(0.1), radius: 5)
         )
-        .task {
-            try? await viewModel.downloadImage(forURL: photo.imgSrc)
-        }
+        .task {  try? await viewModel.downloadImage(forURL: photo.imgSrc) }
     }
 }
 

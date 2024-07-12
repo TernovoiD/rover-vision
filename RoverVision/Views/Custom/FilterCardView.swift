@@ -1,10 +1,15 @@
 import SwiftUI
 
 struct FilterCardView: View {
+    
+    let filter: Filter
+    
     var body: some View {
         VStack(alignment: .leading) {
-            filter
-            ImageInfoView(rover: "Curiosity", camera: "Front Hazard Avoidance Camera", date: "June 6, 2019")
+            filterHeader
+            ImageInfoView(rover: filter.rover.description(),
+                          camera: filter.camera?.description() ?? "All",
+                          date: filter.date.formatted(date: .abbreviated, time: .omitted))
         }
         .padding()
         .background(Color.backgroundOne
@@ -14,7 +19,7 @@ struct FilterCardView: View {
         )
     }
     
-    private var filter: some View {
+    private var filterHeader: some View {
         HStack {
             Color.accenOne
                 .frame(height: 2)
@@ -28,6 +33,6 @@ struct FilterCardView: View {
 #Preview {
     ZStack {
         Color.backgroundOne.ignoresSafeArea()
-        FilterCardView().padding()
+        FilterCardView(filter: Filter(date: Date(), rover: .opportunity, camera: .chemcam)).padding()
     }
 }

@@ -2,12 +2,18 @@ import SwiftUI
 
 struct HistoryView: View {
     
+    @StateObject var viewModel = HistoryViewModel()
     @Environment(\.dismiss) private var dismiss
-    @State var filters: [Filter]
+    @State var selectedFilter: Filter?
+    let useFilter: (_ filter: Filter) -> ()
     
     var body: some View {
         ZStack {
-            filtersList
+            if viewModel.filters.isEmpty {
+                Image("Empty")
+            } else {
+                filtersList
+            }
             VStack {
                 topBar
                     .addRVNavigationBarBackground()
@@ -16,11 +22,34 @@ struct HistoryView: View {
         }
         .background(Color.backgroundOne)
         .navigationBarBackButtonHidden()
+        .actionSheet(item: $selectedFilter) { filter in
+            ActionSheet(title: Text("Menu Filter"), buttons: [
+                .cancel(),
+                .default(
+                    Text("Use"),
+                    action: {
+                        useFilter(filter)
+                        dismiss()
+                    }
+                ),
+                .destructive(
+                    Text("Delete"),
+                    action: {
+                        withAnimation(.easeInOut) { viewModel.delete(filter: filter) }
+                    }
+                )
+                
+            ])
+        }
+        .alert(viewModel.errorTitle, isPresented: $viewModel.error, actions: {
+            Button("OK", role: .cancel) { viewModel.clearError() }
+        }, message: { Text(viewModel.errorMessage) })
     }
 }
 
 #Preview {
-    HistoryView(filters: [ ])
+    HistoryView(useFilter: { filter in })
+        .environmentObject(HistoryViewModel())
 }
 
 
@@ -33,8 +62,9 @@ private extension HistoryView {
             topBar.opacity(0)
                 .padding(20)
             LazyVStack(spacing: 15) {
-                ForEach(filters) { _ in
-                    FilterCardView()
+                ForEach(viewModel.filters) { filter in
+                    FilterCardView(filter: filter)
+                        .onTapGesture { selectedFilter = filter }
                 }
             }
             .padding(.horizontal)
