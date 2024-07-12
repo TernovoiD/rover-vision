@@ -70,6 +70,11 @@ private extension PhotoDetailView {
             image.resizable()
         } placeholder: {
             Color.red
+                .overlay {
+                    Text("Error")
+                        .font(.largeTitle.bold())
+                        .foregroundStyle(Color.white)
+                }
         }
     }
     
