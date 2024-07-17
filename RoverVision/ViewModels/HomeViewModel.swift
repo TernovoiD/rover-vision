@@ -3,14 +3,14 @@ import Foundation
 final class HomeViewModel: ObservableObject {
     
     @Published var photos: [Photo] = [ ]
-    let photosManager = NASAManager()
-    let filtersManager = FilterCoreDataManager()
+    private let photosManager = NASAManager()
+    private let filtersManager = FilterCoreDataManager.shared
     
     // Filter
     @Published var filterDate = Date()
     @Published var filterRover: RoverName = .curiosity
     @Published var filterCamera: CameraName? = nil
-    @Published var currentPage = 1
+    private var currentPage = 1
     
     // Error handling
     @Published var error: Bool = false
@@ -20,39 +20,28 @@ final class HomeViewModel: ObservableObject {
     // Loading state
     @Published var loading: Bool = false
     
-    init() {
-        Task { await loadPhotos() }
+    func loadPhotos(fromNewPage: Bool = false) async {
+        guard self.loading == false else { return }
+        loadingState(true)
+        let filter = getCurrentFilter()
+        currentPage = fromNewPage ? currentPage + 1 : 1
+        do {
+            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: currentPage, usingCamera: filter.camera, onDate: filter.date)
+            show(photos: photos)
+        } catch let error {
+            showError(title: "Unable to load Photos", description: error.localizedDescription)
+        }
+        loadingState(false)
     }
     
-    func loadPhotos() async {
-        loadingState(true)
-        do {
-            let filter = getCurrentFilter()
-            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: 1, usingCamera: filter.camera, onDate: filter.date)
-            DispatchQueue.main.async {
+    private func show(photos: [Photo]) {
+        DispatchQueue.main.async {
+            if self.currentPage == 1 {
                 self.photos = photos
-                self.currentPage = 1
-            }
-        } catch let error {
-            showError(title: "Unable to load Photos", description: error.localizedDescription)
-        }
-        loadingState(false)
-    }
-    
-    func loadMorePhotos() async {
-        loadingState(true)
-        do {
-            let filter = getCurrentFilter()
-            let newPage = currentPage + 1
-            let photos = try await photosManager.getPhotos(forRover: filter.rover, fromPage: newPage, usingCamera: filter.camera, onDate: filter.date)
-            DispatchQueue.main.async {
+            } else {
                 self.photos.append(contentsOf: photos)
-                self.currentPage = newPage
             }
-        } catch let error {
-            showError(title: "Unable to load Photos", description: error.localizedDescription)
         }
-        loadingState(false)
     }
     
     private func loadingState(_ state: Bool) {

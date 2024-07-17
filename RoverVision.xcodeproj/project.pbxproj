@@ -22,8 +22,6 @@
 		81744D172C3EC0E300128384 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D162C3EC0E300128384 /* HomeView.swift */; };
 		81744D192C3ECE4000128384 /* PhotoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D182C3ECE4000128384 /* PhotoCardView.swift */; };
 		81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1A2C3ECE4900128384 /* FilterCardView.swift */; };
-		81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1C2C3ECF0A00128384 /* Camera.swift */; };
-		81744D1F2C3ECF1000128384 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D1E2C3ECF1000128384 /* Rover.swift */; };
 		81744D242C3ED34B00128384 /* ImageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744D232C3ED34B00128384 /* ImageInfoView.swift */; };
 		8189BEBA2C4115DA006955CB /* RoverSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BEB92C4115DA006955CB /* RoverSelectorView.swift */; };
 		8189BEBC2C411AAE006955CB /* CameraSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BEBB2C411AAE006955CB /* CameraSelectorView.swift */; };
@@ -57,8 +55,6 @@
 		81744D162C3EC0E300128384 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		81744D182C3ECE4000128384 /* PhotoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCardView.swift; sourceTree = "<group>"; };
 		81744D1A2C3ECE4900128384 /* FilterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCardView.swift; sourceTree = "<group>"; };
-		81744D1C2C3ECF0A00128384 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		81744D1E2C3ECF1000128384 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
 		81744D232C3ED34B00128384 /* ImageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoView.swift; sourceTree = "<group>"; };
 		8189BEB92C4115DA006955CB /* RoverSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverSelectorView.swift; sourceTree = "<group>"; };
 		8189BEBB2C411AAE006955CB /* CameraSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSelectorView.swift; sourceTree = "<group>"; };
@@ -142,8 +138,6 @@
 			children = (
 				81744D0C2C3EAE7100128384 /* Filter.swift */,
 				81744D062C3EAA2B00128384 /* Photo.swift */,
-				81744D1C2C3ECF0A00128384 /* Camera.swift */,
-				81744D1E2C3ECF1000128384 /* Rover.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,9 +301,7 @@
 				81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */,
 				8189BEBC2C411AAE006955CB /* CameraSelectorView.swift in Sources */,
 				81744D0A2C3EABA600128384 /* NASAManager.swift in Sources */,
-				81744D1D2C3ECF0A00128384 /* Camera.swift in Sources */,
 				81BCB2322C3FCBE90053A071 /* LoadingView.swift in Sources */,
-				81744D1F2C3ECF1000128384 /* Rover.swift in Sources */,
 				81744D192C3ECE4000128384 /* PhotoCardView.swift in Sources */,
 				81744D132C3EBEF500128384 /* HomeViewModel.swift in Sources */,
 				81BCB2242C3FBA9A0053A071 /* FilterButtonView.swift in Sources */,

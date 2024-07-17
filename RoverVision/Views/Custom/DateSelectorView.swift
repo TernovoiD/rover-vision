@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DateSelectorView: View {
     
-    @State var date: Date
+    @State var date: Date // Pre defined date
     let select: (_ date: Date) -> ()
     let close: () -> ()
     

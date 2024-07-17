@@ -9,9 +9,10 @@ struct HomeView: View {
     }
     
     @StateObject var viewModel = HomeViewModel()
-    @State var selectedPhotoURL: URL? = nil
+    @State private var selectedPhotoURL: URL? = nil
     @State private var state: Selector?
     @State private var launching = true
+    @State var scrollToTopVar = false
     
     var body: some View {
         NavigationView {
@@ -42,18 +43,12 @@ struct HomeView: View {
                     .offset(x: launching ? 0 : -1000)
             }
             .background(Color.backgroundOne)
-            .onTapGesture {
-                if state == .date {
-                    updateState()
-                } else {
-                    updateState(to: .date)
-                }
-            }
         }
         .alert(viewModel.errorTitle, isPresented: $viewModel.error, actions: {
             Button("OK", role: .cancel) { viewModel.clearError() }
         }, message: { Text(viewModel.errorMessage) })
         .onAppear { stopLaunchingStateWithDelay() }
+        .task { await viewModel.loadPhotos() }
     }
     
     private func stopLaunchingStateWithDelay() {
@@ -72,11 +67,8 @@ struct HomeView: View {
     }
     
     private func loadPhotos() {
+        scrollToTopVar.toggle()
         Task { await viewModel.loadPhotos() }
-    }
-    
-    private func loadMorePhotos() {
-        Task { await viewModel.loadMorePhotos() }
     }
     
     private func updateState(to state: Selector? = nil) {
@@ -95,18 +87,30 @@ struct HomeView: View {
 private extension HomeView {
     
     var photosList: some View {
-        ScrollView(showsIndicators: true) {
-            topBar.opacity(0)
-                .padding(20)
-            LazyVStack(spacing: 15) {
-                ForEach(viewModel.photos) { photo in
-                    PhotoCardView(photo: photo, selectedPhotoURL: $selectedPhotoURL)
+        ScrollViewReader { reader in
+            
+            ScrollView(showsIndicators: true) {
+                topBar.opacity(0)
+                    .padding(10)
+                LazyVStack(spacing: 15) {
+                    Color.clear
+                        .frame(maxHeight: 1)
+                        .id("topScrollPoint")
+                    ForEach(viewModel.photos) { photo in
+                        PhotoCardView(photo: photo, selectedPhotoURL: $selectedPhotoURL)
+                    }
+                    if !viewModel.photos.isEmpty {
+                        Color.clear.task { await viewModel.loadPhotos(fromNewPage: true) }
+                    }
                 }
-                if viewModel.photos.count != 0 {
-                    Color.clear.task { await viewModel.loadMorePhotos() }
+                .padding(.horizontal)
+                .onChange(of: scrollToTopVar) { _ in
+                    withAnimation {
+                        reader.scrollTo("topScrollPoint", anchor: .bottom)
+                    }
                 }
             }
-            .padding(.horizontal)
+            
         }
     }
     

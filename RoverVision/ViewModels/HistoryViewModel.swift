@@ -3,7 +3,7 @@ import Foundation
 final class HistoryViewModel: ObservableObject {
     
     @Published var filters: [Filter] = [ ]
-    let filtersManager = FilterCoreDataManager()
+    private let filtersManager = FilterCoreDataManager.shared
     
     // Error handling
     @Published var error: Bool = false

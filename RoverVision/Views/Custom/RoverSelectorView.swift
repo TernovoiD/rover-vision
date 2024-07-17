@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RoverSelectorView: View {
     
-    @State var rover: RoverName
+    @State var rover: RoverName // Pre defined rover
     let select: (_ rover: RoverName) -> ()
     let close: () -> ()
     

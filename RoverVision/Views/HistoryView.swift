@@ -4,7 +4,7 @@ struct HistoryView: View {
     
     @StateObject var viewModel = HistoryViewModel()
     @Environment(\.dismiss) private var dismiss
-    @State var selectedFilter: Filter?
+    @State private var selectedFilter: Filter?
     let useFilter: (_ filter: Filter) -> ()
     
     var body: some View {
