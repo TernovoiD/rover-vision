@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		814FEC812C405FA60071A4BF /* FilterCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814FEC802C405FA60071A4BF /* FilterCoreDataManager.swift */; };
-		814FEC842C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */; };
 		81744CEA2C3E9BF800128384 /* RoverVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81744CE92C3E9BF800128384 /* RoverVisionApp.swift */; };
 		81744CEE2C3E9BF900128384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CED2C3E9BF900128384 /* Assets.xcassets */; };
 		81744CF12C3E9BF900128384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81744CF02C3E9BF900128384 /* Preview Assets.xcassets */; };
@@ -26,6 +25,7 @@
 		8189BEBA2C4115DA006955CB /* RoverSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BEB92C4115DA006955CB /* RoverSelectorView.swift */; };
 		8189BEBC2C411AAE006955CB /* CameraSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BEBB2C411AAE006955CB /* CameraSelectorView.swift */; };
 		8189BEBE2C412513006955CB /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BEBD2C412513006955CB /* DateSelectorView.swift */; };
+		818BCD692C4806D8005BA12C /* RoverVisionContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 818BCD672C4806D8005BA12C /* RoverVisionContainer.xcdatamodeld */; };
 		81BCB2242C3FBA9A0053A071 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2232C3FBA9A0053A071 /* FilterButtonView.swift */; };
 		81BCB2262C3FBEB70053A071 /* HistoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2252C3FBEB70053A071 /* HistoryButtonView.swift */; };
 		81BCB2292C3FC0110053A071 /* RVNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BCB2282C3FC0110053A071 /* RVNavigationBarModifier.swift */; };
@@ -40,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		814FEC802C405FA60071A4BF /* FilterCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCoreDataManager.swift; sourceTree = "<group>"; };
-		814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoverVisionContainer.xcdatamodel; sourceTree = "<group>"; };
 		81744CE62C3E9BF800128384 /* RoverVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoverVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81744CE92C3E9BF800128384 /* RoverVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverVisionApp.swift; sourceTree = "<group>"; };
 		81744CED2C3E9BF900128384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		8189BEB92C4115DA006955CB /* RoverSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverSelectorView.swift; sourceTree = "<group>"; };
 		8189BEBB2C411AAE006955CB /* CameraSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSelectorView.swift; sourceTree = "<group>"; };
 		8189BEBD2C412513006955CB /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
+		818BCD682C4806D8005BA12C /* RoverVisionContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoverVisionContainer.xcdatamodel; sourceTree = "<group>"; };
 		81BCB2232C3FBA9A0053A071 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 		81BCB2252C3FBEB70053A071 /* HistoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButtonView.swift; sourceTree = "<group>"; };
 		81BCB2282C3FC0110053A071 /* RVNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVNavigationBarModifier.swift; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 		81744CDD2C3E9BF800128384 = {
 			isa = PBXGroup;
 			children = (
+				818BCD672C4806D8005BA12C /* RoverVisionContainer.xcdatamodeld */,
 				81744CE82C3E9BF800128384 /* RoverVision */,
 				81744CE72C3E9BF800128384 /* Products */,
 			);
@@ -110,7 +111,6 @@
 				81744D082C3EAB4A00128384 /* Managers */,
 				81744CF82C3E9CBF00128384 /* Models */,
 				81744CF72C3E9C1800128384 /* Supporting */,
-				814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */,
 			);
 			path = RoverVision;
 			sourceTree = "<group>";
@@ -288,6 +288,7 @@
 				81744D0D2C3EAE7100128384 /* Filter.swift in Sources */,
 				81744D152C3EBF0800128384 /* HistoryViewModel.swift in Sources */,
 				81744D1B2C3ECE4900128384 /* FilterCardView.swift in Sources */,
+				818BCD692C4806D8005BA12C /* RoverVisionContainer.xcdatamodeld in Sources */,
 				81744D112C3EAED400128384 /* CameraName.swift in Sources */,
 				81BCB2392C3FFC230053A071 /* PhotoCardViewModel.swift in Sources */,
 				8189BEBE2C412513006955CB /* DateSelectorView.swift in Sources */,
@@ -307,7 +308,6 @@
 				81BCB2242C3FBA9A0053A071 /* FilterButtonView.swift in Sources */,
 				81BCB22D2C3FC8260053A071 /* LottieView.swift in Sources */,
 				81744D072C3EAA2B00128384 /* Photo.swift in Sources */,
-				814FEC842C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld in Sources */,
 				814FEC812C405FA60071A4BF /* FilterCoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,14 +551,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		814FEC822C4060E00071A4BF /* RoverVisionContainer.xcdatamodeld */ = {
+		818BCD672C4806D8005BA12C /* RoverVisionContainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */,
+				818BCD682C4806D8005BA12C /* RoverVisionContainer.xcdatamodel */,
 			);
-			currentVersion = 814FEC832C4060E00071A4BF /* RoverVisionContainer.xcdatamodel */;
+			currentVersion = 818BCD682C4806D8005BA12C /* RoverVisionContainer.xcdatamodel */;
 			name = RoverVisionContainer.xcdatamodeld;
-			path = /Users/danyloternovoi/Developer/RoverVision/RoverVision/RoverVisionContainer.xcdatamodeld;
+			path = "/Users/danyloternovoi/Developer/rover-vision/RoverVision/RoverVisionContainer.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
