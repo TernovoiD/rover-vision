@@ -2,12 +2,12 @@ import SwiftUI
 
 struct PhotoDetailView: View {
     @Binding var imageURL: URL?
-    @State var screenW = 0.0
-    @State var screenH = 0.0
-    @State var scale = 1.0
-    @State var lastScale = 0.0
-    @State var offset: CGSize = .zero
-    @State var lastOffset: CGSize = .zero
+    @State private var screenW = 0.0
+    @State private var screenH = 0.0
+    @State private var scale = 1.0
+    @State private var lastScale = 0.0
+    @State private var offset: CGSize = .zero
+    @State private var lastOffset: CGSize = .zero
     
     var body: some View {
         GeometryReader { geometry in

@@ -45,7 +45,11 @@ struct PhotoCardView: View {
             .clipped()
             .shadow(color: .black.opacity(0.1), radius: 5)
         )
-        .task {  try? await viewModel.downloadImage(forURL: photo.imgSrc) }
+        .task { await loadImage() }
+    }
+    
+    private func loadImage() async {
+        try? await viewModel.downloadImage(forURL: photo.imgSrc)
     }
 }
 

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CameraSelectorView: View {
     
-    @State var camera: CameraName?
+    @State var camera: CameraName? // Pre defined camera
     let select: (_ camera: CameraName?) -> ()
     let close: () -> ()
     

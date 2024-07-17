@@ -3,9 +3,10 @@ import CoreData
 
 final class FilterCoreDataManager {
     
-    let container = NSPersistentContainer(name: "RoverVisionContainer")
+    private let container = NSPersistentContainer(name: "RoverVisionContainer")
+    static let shared = FilterCoreDataManager()
     
-    init() {
+    private init() {
         container.loadPersistentStores { _, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")

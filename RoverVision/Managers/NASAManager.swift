@@ -29,6 +29,9 @@ class NASAManager {
     }
     
     private func loadPhotos(fromURL url: URL) async throws -> [Photo] {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
         struct NASAResponse: Decodable {
             let photos: [Photo]
         }
@@ -36,7 +39,7 @@ class NASAManager {
         let (data, response) = try await URLSession.shared.data(from: url)
         guard let response = response as? HTTPURLResponse else { throw NetworkError.badResponse }
         guard response.statusCode >= 200 && response.statusCode < 300 else { throw NetworkError.badStatus }
-        guard let responseFromNASA = try? JSONDecoder().decode(NASAResponse.self, from: data) else { throw NetworkError.failedToDecodeResponse }
+        guard let responseFromNASA = try? decoder.decode(NASAResponse.self, from: data) else { throw NetworkError.failedToDecodeResponse }
         return responseFromNASA.photos
     }
     
